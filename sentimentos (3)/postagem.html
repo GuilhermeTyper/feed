@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentimentos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-fixed min-h-screen signature-gradient font-body text-on-surface">
+    <!-- TopAppBar -->
+    <header class="bg-white/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0px_20px_40px_rgba(57,43,83,0.08)]">
+        <div class="flex justify-between items-center px-6 py-4 max-w-2xl mx-auto">
+            <span class="text-2xl font-bold bg-gradient-to-r from-[#8523dd] to-[#00687f] bg-clip-text text-transparent tracking-tight">Sentimentos</span>
+            <div class="flex items-center gap-4">
+                <button class="text-slate-500 hover:opacity-80 transition-opacity">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-32 px-4 max-w-2xl mx-auto space-y-6">
+        <!-- Share a feeling card -->
+        <section class="bg-white rounded-2xl p-6 shadow-[0px_20px_40px_rgba(57,43,83,0.08)]">
+            <h2 class="text-slate-500 font-semibold text-sm mb-4 uppercase tracking-wider">Compartilhe um sentimento</h2>
+            <div class="bg-slate-50 rounded-2xl p-4 mb-4">
+                <textarea id="feeling-input" class="w-full bg-transparent border-none focus:ring-0 text-slate-800 placeholder-slate-400 resize-none h-24 text-lg font-medium" placeholder="Como você está se sentindo hoje?"></textarea>
+            </div>
+            <div class="flex items-center justify-between">
+                <div class="flex gap-2">
+                    <button class="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">
+                        <span class="material-symbols-outlined text-xl">gif</span>
+                        <span class="text-sm font-medium">Adicionar GIF</span>
+                    </button>
+                    <button class="p-2 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">
+                        <span class="material-symbols-outlined">mood</span>
+                    </button>
+                </div>
+                <button id="send-btn" class="signature-gradient text-white px-8 py-2.5 rounded-full font-bold shadow-lg active:scale-95 transition-all">
+                    Enviar
+                </button>
+            </div>
+        </section>
+
+        <!-- Feed List -->
+        <div id="feed" class="space-y-6">
+            <!-- Posts will be injected here -->
+        </div>
+    </main>
+
+    <!-- BottomNavBar -->
+    <nav class="fixed bottom-8 left-0 right-0 z-50 flex justify-center px-4">
+        <div class="bg-white/80 backdrop-blur-xl w-full max-w-md rounded-full shadow-[0px_20px_40px_rgba(57,43,83,0.12)] flex justify-around items-center p-2">
+            <button class="nav-btn active">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                <span class="nav-label">Sentimentos</span>
+            </button>
+            <button class="nav-btn">
+                <span class="material-symbols-outlined">search</span>
+                <span class="nav-label">Buscar</span>
+            </button>
+            <button class="nav-btn">
+                <span class="material-symbols-outlined">auto_awesome</span>
+                <span class="nav-label">Humores</span>
+            </button>
+            <button class="nav-btn">
+                <span class="material-symbols-outlined">person</span>
+                <span class="nav-label">Perfil</span>
+            </button>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
